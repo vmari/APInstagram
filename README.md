@@ -6,10 +6,10 @@ Upload images to Instagram w/o official API
 
 ```php
 namespace MyProject;
-use VM\APInstagram;
+use VM\Instagram;
 
 try {
-    $api = new APInstagram($user,$pass);
+    $api = new Instagram($user,$pass);
 
     $api->uploadPhoto('test.jpg','Hello world from PHP!');
     echo 'Ok!';

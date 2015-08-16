@@ -33,7 +33,12 @@ class Instagram
     curl_setopt($ch, CURLOPT_USERAGENT, $this->agent);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-    curl_setopt($ch, CURLOPT_COOKIEFILE, self::TMP_DIR.'/cookies.txt');
+
+    if($cookies) {
+        curl_setopt($ch, CURLOPT_COOKIEFILE, self::TMP_DIR.'/cookies.txt');            
+    } else {
+        curl_setopt($ch, CURLOPT_COOKIEJAR, self::TMP_DIR.'/cookies.txt');
+    }
 
     if($post_data) {
       curl_setopt($ch, CURLOPT_POST, true);
@@ -131,6 +136,7 @@ class Instagram
     if(empty($data)){
       throw new Exception('Error decoding response', 1);
     }
+    return $data;
   }
 
   private function cleanCaption( $caption ){
