@@ -26,7 +26,7 @@ class Instagram
     $this->device_id = $this->getDeviceID();
   }
 
-  private sendRequest( $url, $post_data = null, $cookies = false )
+  private function sendRequest( $url, $post_data = null, $cookies = false )
   {
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, self::API_URL.$url);
@@ -111,7 +111,7 @@ class Instagram
 
   private function generateDataLogin()
   {
-    return '{"device_id":"'.$this->device_id.'","guid":"'.$this->guid.'","username":"'.$this->username.'","password":"'.$this->password.'","Content-Type":"application/x-www-form-urlencoded; charset=UTF-8"}'
+    return '{"device_id":"'.$this->device_id.'","guid":"'.$this->guid.'","username":"'.$this->username.'","password":"'.$this->password.'","Content-Type":"application/x-www-form-urlencoded; charset=UTF-8"}';
   }
 
   private function generateDataMediaConfig( $media_id , $caption )
