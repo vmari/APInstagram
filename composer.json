@@ -1,5 +1,5 @@
 {
-    "name": "valentinmari/APInstagram",
+    "name": "valentinmari/instagram",
     "type": "library",
     "description": "An easy-to-use PHP Class for post images to Instagram.",
     "keywords": ["instagram", "api"],
