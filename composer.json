@@ -1,0 +1,26 @@
+{
+    "name": "valentinmari/APInstagram",
+    "type": "library",
+    "description": "An easy-to-use PHP Class for post images to Instagram.",
+    "keywords": ["instagram", "api"],
+    "homepage": "https://github.com/valentinari/APInstagram",
+    "license": "GPLV2",
+    "authors": [
+        {
+            "name": "Valentin Mari",
+            "email": "valentinmari@hotmail.com",
+            "homepage": "http://valentinmari.github.io/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "VM\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
